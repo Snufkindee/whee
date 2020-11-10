@@ -1,0 +1,36 @@
+@import "fonts";
+@import "variables";
+@import "breakpoints";
+
+@mixin navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $nav-gray;
+  padding: 0 30px;
+  @include breakpoint(tablet) {
+    justify-content: space-between;
+  }
+}
+
+@mixin nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin nav-paragraph {
+  font-family: "Playfair Display", sans-serif;
+  font-style: italic;
+  font-size: 1rem;
+}
+
+@mixin triangle-border {
+  background: linear-gradient(-45deg, $white 25px, transparent 0),
+    linear-gradient(45deg, $white 25px, transparent 0);
+  background-repeat: repeat-x;
+  background-size: 50px 50px;
+  height: 50px;
+  width: 100%;
+  content: " ";
+}

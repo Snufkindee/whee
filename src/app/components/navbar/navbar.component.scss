@@ -1,0 +1,42 @@
+@import "mixins";
+@import "breakpoints";
+
+.container {
+  background-color: $nav-gray;
+}
+
+.navbar {
+  @include navigation;
+}
+
+.content {
+  @include nav-item;
+
+  @include breakpoint(tablet) {
+    flex-direction: row;
+  }
+}
+
+.title {
+  font-family: "Pacifico", cursive, sans-serif;
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: black;
+  text-decoration: none;
+
+  @include breakpoint(tablet) {
+    font-size: 3.5rem;
+  }
+}
+
+.subtitle {
+  @include nav-paragraph;
+
+  @include breakpoint(tablet) {
+    margin: 15px 0 0 30px;
+  }
+}
+
+.divider {
+  @include triangle-border;
+}

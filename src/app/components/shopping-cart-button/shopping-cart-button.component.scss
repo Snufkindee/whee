@@ -1,0 +1,74 @@
+@import "variables";
+@import "breakpoints";
+
+.shopping-cart {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  right: 3vw;
+  top: 0;
+
+  @include breakpoint(tablet) {
+    position: inherit;
+    flex-direction: row;
+  }
+}
+
+.item-amount {
+  font-size: 25px;
+  font-family: "Playfair Display", sans-serif;
+  font-style: italic;
+
+  @include breakpoint(tablet) {
+    margin-right: 30px;
+    font-size: 16px;
+  }
+}
+
+.cart-empty {
+  font-family: "Playfair Display", sans-serif;
+  font-style: italic;
+  margin-right: 30px;
+  font-size: 16px;
+
+  @include breakpoint(mobile) {
+    display: none;
+  }
+}
+
+.cart-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-decoration: none;
+  text-align: center;
+  background-color: $black;
+  color: $white;
+
+  @include breakpoint(tablet) {
+    transition: all 0.25s ease;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.cart-link:hover {
+  @include breakpoint(tablet) {
+    background-color: $white;
+    color: $black;
+    transition: all 0.25s ease;
+  }
+}
+
+.cart-logo {
+  font-size: 2rem;
+
+  @include breakpoint(tablet) {
+    font-size: 1.5rem;
+  }
+}
