@@ -1,0 +1,96 @@
+@import "mixins";
+@import "breakpoints";
+
+img {
+  height: 125px;
+  width: 125px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include breakpoint(tablet) {
+    flex-direction: row;
+    padding: 0 40px;
+  }
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 300px;
+
+  @include breakpoint(tablet) {
+    align-items: flex-start;
+    margin: 0 170px 0 30px;
+  }
+}
+
+.item-name {
+  @include header-medium;
+
+  margin: 15px 0;
+}
+
+.item-description {
+  @include paragraph-small;
+
+  margin: 0;
+  width: 70%;
+  text-align: center;
+
+  @include breakpoint(tablet) {
+    width: 100%;
+    text-align: start;
+  }
+}
+
+.price-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+
+  @include breakpoint(tablet) {
+    align-items: flex-end;
+  }
+}
+
+.price {
+  @include header-medium;
+  font-style: normal;
+
+  margin: 15px 0;
+}
+
+.add-cart-button {
+  @include paragraph;
+
+  font-size: 1.125rem;
+  font-style: normal;
+  cursor: pointer;
+  background-color: $white;
+  border: 1px solid $black;
+  padding: 10px 30px;
+  width: 100%;
+
+  @include breakpoint(tablet) {
+    background-color: $white;
+    color: $black;
+    transition: all 0.25s ease;
+  }
+}
+
+.add-cart-button:hover {
+  @include breakpoint(tablet) {
+    background-color: $black;
+    color: $white;
+    transition: all 0.25s ease;
+  }
+}

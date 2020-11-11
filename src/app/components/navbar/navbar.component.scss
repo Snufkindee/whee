@@ -2,7 +2,7 @@
 @import "breakpoints";
 
 .container {
-  background-color: $nav-gray;
+  background-color: $light-gray;
 }
 
 .navbar {
@@ -19,21 +19,17 @@
 
 .title {
   font-family: "Pacifico", cursive, sans-serif;
-  font-size: 3.5rem;
+  font-size: 4.125rem;
   font-weight: 400;
   color: black;
   text-decoration: none;
-
-  @include breakpoint(tablet) {
-    font-size: 3.5rem;
-  }
 }
 
 .subtitle {
-  @include nav-paragraph;
+  @include paragraph;
 
   @include breakpoint(tablet) {
-    margin: 15px 0 0 30px;
+    margin-left: 30px;
   }
 }
 

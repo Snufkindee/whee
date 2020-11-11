@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Circle",
+    "description": "Perfect choice when you don't need any corners.",
+    "price": 999,
+    "image": "assets/circle.svg"
+  },
+  {
+    "id": 2,
+    "name": "Rectangle",
+    "description": "For once, it’s a great idea to think inside the box.",
+    "price": 899,
+    "image": "assets/rectangle.svg"
+  },
+  {
+    "id": 3,
+    "name": "Triangle",
+    "description": "A true classic with three elegant corners.",
+    "price": 1009,
+    "image": "assets/triangle.svg"
+  }
+]

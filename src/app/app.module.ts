@@ -8,6 +8,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { ShoppingCartButtonComponent } from './components/shopping-cart-button/shopping-cart-button.component';
+import { ProductComponent } from './components/product/product.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { ShoppingCartButtonComponent } from './components/shopping-cart-button/s
     NavbarComponent,
     ProductsComponent,
     ShoppingCartButtonComponent,
+    ProductComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NoopAnimationsModule],
   providers: [],

@@ -6,7 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: $nav-gray;
+  background-color: $light-gray;
   padding: 0 30px;
   @include breakpoint(tablet) {
     justify-content: space-between;
@@ -19,10 +19,23 @@
   align-items: center;
 }
 
-@mixin nav-paragraph {
+@mixin paragraph {
   font-family: "Playfair Display", sans-serif;
   font-style: italic;
   font-size: 1rem;
+}
+
+@mixin paragraph-small {
+  @include paragraph;
+
+  font-style: normal;
+  font-size: 0.875rem;
+}
+
+@mixin header-medium {
+  @include paragraph;
+
+  font-size: 2.25rem;
 }
 
 @mixin triangle-border {
