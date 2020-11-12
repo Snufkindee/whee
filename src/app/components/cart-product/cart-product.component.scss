@@ -39,7 +39,7 @@
   margin: 15px 0;
 }
 
-.item-price {
+.item-description {
   @include paragraph-small;
 
   font-size: 1.125rem;
@@ -76,5 +76,5 @@
 .reduce-cart-button {
   @include button;
 
-  width: 50%;
+  width: 80%;
 }
