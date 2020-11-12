@@ -47,3 +47,30 @@
   width: 100%;
   content: " ";
 }
+
+@mixin button {
+  @include paragraph;
+
+  display: flex;
+  justify-content: center;
+  white-space: nowrap;
+
+  font-size: 1.125rem;
+  font-style: normal;
+  cursor: pointer;
+  background-color: $white;
+  border: 1px solid $black;
+  padding: 10px 30px;
+
+  @include breakpoint(tablet) {
+    background-color: $white;
+    color: $black;
+    transition: all 0.25s ease;
+
+    &:hover {
+      background-color: $black;
+      color: $white;
+      transition: all 0.25s ease;
+    }
+  }
+}

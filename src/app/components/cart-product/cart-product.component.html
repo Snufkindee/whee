@@ -1,0 +1,28 @@
+<ng-container *ngIf="product">
+  <div class="container">
+    <div class="image-container">
+      <img
+        *ngIf="product.image"
+        class="image"
+        [src]="product.image"
+        [alt]="product.name"
+      />
+      <span *ngIf="!product.image">Image not found</span>
+    </div>
+
+    <div class="info-container">
+      <h2 class="item-name">{{ product.name }}</h2>
+      <p class="item-price">
+        {{ product.price }} * {{ product.qty }} =
+        {{ product.price * product.qty }} €
+      </p>
+    </div>
+
+    <div class="button-container" *ngIf="product.qty">
+      <span class="item-qty">x {{ product.qty }} </span>
+      <button class="reduce-cart-button" (click)="reduceProduct(product)">
+        - 1
+      </button>
+    </div>
+  </div>
+</ng-container>

@@ -5,7 +5,7 @@ import * as data from '../../store/products.json';
   providedIn: 'root',
 })
 export class ProductsService {
-  public products: any = (data as any).default;
+  private products: any = (data as any).default;
 
   constructor() {}
 

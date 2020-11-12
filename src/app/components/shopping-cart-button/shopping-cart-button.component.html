@@ -1,7 +1,13 @@
-<div class="shopping-cart">
-  <span class="item-amount">0</span>
-  <span class="cart-empty">No items in cart</span>
-  <a class="cart-link" routerLink="/cart">
+<div class="shopping-cart-container">
+  <span class="item-amount">{{ cartService.getCartTotalAmount() }}</span>
+  <span class="cart-empty">
+    {{
+      cartService.getCartTotalAmount() <= 0
+        ? "No items in cart"
+        : cartService.getCartTotalAmount()
+    }}
+  </span>
+  <a class="cart-link" (click)="openNav()">
     <mat-icon class="material-icons cart-logo"> shopping_cart </mat-icon>
   </a>
 </div>

@@ -1,16 +1,21 @@
-<div class="container">
+<div class="container" *ngIf="product">
   <div class="image-container">
-    <img *ngIf="imgSrc" class="image" [src]="imgSrc" [alt]="name" />
-    <span *ngIf="!imgSrc">Image not found</span>
+    <img
+      *ngIf="product.image"
+      class="image"
+      [src]="product.image"
+      [alt]="product.name"
+    />
+    <span *ngIf="!product.image">Image not found</span>
   </div>
 
-  <div class="info-container" *ngIf="name && description">
-    <h2 class="item-name">{{ name }}</h2>
-    <p class="item-description">{{ description }}</p>
+  <div class="info-container" *ngIf="product.name && product.description">
+    <h2 class="item-name">{{ product.name }}</h2>
+    <p class="item-description">{{ product.description }}</p>
   </div>
 
-  <div class="price-container" *ngIf="price">
-    <span class="price">{{ price }} €</span>
+  <div class="price-container" *ngIf="product.price">
+    <span class="price">{{ product.price }} €</span>
     <button class="add-cart-button" (click)="addToCart(product)">
       ADD TO CART
     </button>

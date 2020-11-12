@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import * as data from '../../../store/products.json';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -7,17 +6,9 @@ import * as data from '../../../store/products.json';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements OnInit {
-  private products: any = (data as any).default;
+  @Input() cartList;
 
   constructor() {}
 
-  ngOnInit(): void {
-    let stuff;
-    for (let asd of this.products) {
-      if (asd.name === 'Circle') {
-        stuff = asd.name;
-      }
-    }
-    console.log(stuff);
-  }
+  ngOnInit(): void {}
 }

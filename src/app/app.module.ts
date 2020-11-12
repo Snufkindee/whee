@@ -1,14 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CartComponent } from './pages/cart/cart.component';
+import { CartComponent } from './components/cart/cart.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ProductsComponent } from './pages/products/products.component';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { ShoppingCartButtonComponent } from './components/shopping-cart-button/shopping-cart-button.component';
 import { ProductComponent } from './components/product/product.component';
+import { MatIconModule } from '@angular/material/icon';
+import { CartProductComponent } from './components/cart-product/cart-product.component';
 
 @NgModule({
   declarations: [
@@ -18,8 +17,9 @@ import { ProductComponent } from './components/product/product.component';
     ProductsComponent,
     ShoppingCartButtonComponent,
     ProductComponent,
+    CartProductComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, NoopAnimationsModule],
+  imports: [BrowserModule, MatIconModule],
   providers: [],
   bootstrap: [AppComponent],
 })

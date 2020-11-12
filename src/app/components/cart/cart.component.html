@@ -1,0 +1,22 @@
+<div id="mySidenav" class="sidenav">
+  <div class="header">
+    <h1 class="title">Shopping Cart</h1>
+    <div class="divider"></div>
+  </div>
+  <span class="close-btn" (click)="closeNav()">
+    <mat-icon class="material-icons close">close</mat-icon>
+  </span>
+
+  <app-cart-product
+    *ngFor="let product of cartList"
+    [product]="product"
+  ></app-cart-product>
+  <span *ngIf="cartList.length <= 0" class="empty-cart-text"
+    >No items in cart...</span
+  >
+
+  <span class="checkout-container">
+    <span class="total-price">Total price: {{ calcTotal() }} € </span>
+    <button class="checkout-button">CHECKOUT</button>
+  </span>
+</div>

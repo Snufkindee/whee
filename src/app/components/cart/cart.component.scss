@@ -1,0 +1,76 @@
+@import "mixins";
+@import "breakpoints";
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: $white;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.close-btn {
+  text-decoration: none;
+  color: $black;
+  cursor: pointer;
+}
+
+.header {
+  background-color: $light-gray;
+}
+
+.title {
+  @include paragraph;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-style: normal;
+  margin: 0;
+  height: 115px;
+}
+
+.close {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  font-size: 2rem;
+}
+
+.divider {
+  @include triangle-border;
+}
+
+.checkout-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.total-price {
+  @include paragraph;
+
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.checkout-button {
+  @include button;
+
+  margin-top: 10px;
+}
+
+.empty-cart-text {
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}

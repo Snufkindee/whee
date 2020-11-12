@@ -1,21 +1,23 @@
 @import "mixins";
 @import "breakpoints";
 
-.image {
-  height: 125px;
-  width: 125px;
-}
-
 .container {
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
+  border-bottom: 1px solid $light-gray;
+  margin-bottom: 15px;
 
   @include breakpoint(tablet) {
     flex-direction: row;
-    padding: 0 40px;
+    padding: 10px 15px 25px 15px;
   }
+}
+
+.image {
+  height: 125px;
+  width: 125px;
 }
 
 .info-container {
@@ -37,9 +39,10 @@
   margin: 15px 0;
 }
 
-.item-description {
+.item-price {
   @include paragraph-small;
 
+  font-size: 1.125rem;
   margin: 0;
   width: 70%;
   text-align: center;
@@ -50,25 +53,28 @@
   }
 }
 
-.price-container {
+.button-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 200px;
+  margin-bottom: 15px;
 
   @include breakpoint(tablet) {
     align-items: flex-end;
   }
 }
 
-.price {
+.item-qty {
   @include header-medium;
   font-style: normal;
 
   margin: 15px 0;
 }
 
-.add-cart-button {
+.reduce-cart-button {
   @include button;
+
+  width: 50%;
 }
