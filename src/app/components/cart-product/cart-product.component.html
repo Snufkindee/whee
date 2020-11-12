@@ -12,14 +12,11 @@
 
     <div class="info-container">
       <h2 class="item-name">{{ product.name }}</h2>
-      <p class="item-price">
-        {{ product.price }} * {{ product.qty }} =
-        {{ product.price * product.qty }} €
-      </p>
+      <p class="item-description">{{ product.description }}</p>
     </div>
 
     <div class="button-container" *ngIf="product.qty">
-      <span class="item-qty">x {{ product.qty }} </span>
+      <span class="item-qty">{{ product.price }}€ x{{ product.qty }} </span>
       <button class="reduce-cart-button" (click)="reduceProduct(product)">
         - 1
       </button>
