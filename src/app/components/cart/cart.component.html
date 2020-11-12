@@ -15,7 +15,7 @@
     >No items in cart...</span
   >
 
-  <span class="checkout-container">
+  <span *ngIf="cartList.length > 0" class="checkout-container">
     <span class="total-price">Total price: {{ calcTotal() }} € </span>
     <button class="checkout-button">CHECKOUT</button>
   </span>

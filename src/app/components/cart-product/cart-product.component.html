@@ -17,6 +17,9 @@
 
     <div class="button-container" *ngIf="product.qty">
       <span class="item-qty">{{ product.price }}€ x{{ product.qty }} </span>
+      <button class="add-cart-button" (click)="addProduct(product)">
+        ADD BY x1
+      </button>
       <button class="reduce-cart-button" (click)="reduceProduct(product)">
         REDUCE BY x1
       </button>

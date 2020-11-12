@@ -18,4 +18,8 @@ export class CartProductComponent implements OnInit {
   reduceProduct(product) {
     this.cartService.removeProduct(product);
   }
+
+  addProduct(product) {
+    this.cartService.addProduct(product);
+  }
 }

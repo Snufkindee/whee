@@ -25,9 +25,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-width: 300px;
+  min-width: 390px;
 
-  @include breakpoint(tablet) {
+  @include breakpoint(laptop) {
     align-items: flex-start;
     margin: 0 170px 0 30px;
   }
@@ -73,8 +73,13 @@
   margin: 15px 0;
 }
 
-.reduce-cart-button {
+.reduce-cart-button,
+.add-cart-button {
   @include button;
 
   width: 80%;
+}
+
+.add-cart-button {
+  margin-bottom: 15px;
 }
