@@ -14,13 +14,22 @@
 }
 
 .close-btn {
+  display: contents;
   text-decoration: none;
   color: $black;
   cursor: pointer;
+  overflow: hidden;
+  position: sticky;
+  width: 25px;
+  height: 25px;
+  top: 5px;
+  right: 5px;
 }
 
 .header {
   background-color: $light-gray;
+  position: sticky;
+  top: 0;
 }
 
 .title {
@@ -51,7 +60,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 35px;
+  margin: 25px 0;
 }
 
 .total-price {

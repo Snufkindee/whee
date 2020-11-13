@@ -8,6 +8,7 @@ import { CartService } from 'src/app/services/cart.service';
 })
 export class ProductComponent implements OnInit {
   @Input() public product;
+  @Input() public isCart: boolean;
 
   constructor(private cartService: CartService) {}
 

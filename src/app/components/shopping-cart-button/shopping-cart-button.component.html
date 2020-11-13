@@ -4,7 +4,7 @@
     {{
       cartService.getCartTotalAmount() <= 0
         ? "No items in cart"
-        : cartService.getCartTotalAmount()
+        : cartService.getCartTotalAmount() + " items in cart"
     }}
   </span>
   <a class="cart-link" (click)="openNav()">

@@ -2,6 +2,9 @@
 @import "breakpoints";
 
 .container {
+  overflow: hidden;
+  position: sticky;
+  top: 0;
   background-color: $light-gray;
 }
 

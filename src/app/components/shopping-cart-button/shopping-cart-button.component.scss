@@ -4,11 +4,11 @@
 .shopping-cart-container {
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-items: center;
   position: fixed;
-  bottom: 5vw;
-  left: 3vh;
+  top: 5vw;
+  right: 3vh;
 
   @include breakpoint(tablet) {
     position: unset;

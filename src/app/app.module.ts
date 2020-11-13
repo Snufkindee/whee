@@ -7,7 +7,6 @@ import { ProductsComponent } from './pages/products/products.component';
 import { ShoppingCartButtonComponent } from './components/shopping-cart-button/shopping-cart-button.component';
 import { ProductComponent } from './components/product/product.component';
 import { MatIconModule } from '@angular/material/icon';
-import { CartProductComponent } from './components/cart-product/cart-product.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +16,6 @@ import { CartProductComponent } from './components/cart-product/cart-product.com
     ProductsComponent,
     ShoppingCartButtonComponent,
     ProductComponent,
-    CartProductComponent,
   ],
   imports: [BrowserModule, MatIconModule],
   providers: [],
