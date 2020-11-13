@@ -1,31 +1,16 @@
 import { Injectable } from '@angular/core';
 import * as data from '../../store/products.json';
+import { Product } from '../models/product';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ProductsService {
-  private products: any = (data as any).default;
+  private products: Product[] = (data as any).default;
 
   constructor() {}
 
-  getProductById(id: number) {
-    for (let product of this.products) {
-      if (product.id === id) {
-        return product;
-      }
-    }
-  }
-
-  getProductByName(name: string) {
-    for (let product of this.products) {
-      if (product.name === name) {
-        return product;
-      }
-    }
-  }
-
-  getProducts() {
+  getProducts(): Product[] {
     return this.products;
   }
 }

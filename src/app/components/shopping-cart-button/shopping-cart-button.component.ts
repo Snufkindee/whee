@@ -11,7 +11,7 @@ export class ShoppingCartButtonComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  openNav() {
+  openNav(): void {
     document.getElementById('mySidenav').style.width = '100%';
   }
 }

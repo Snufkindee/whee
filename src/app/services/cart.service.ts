@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
+import { Product } from '../models/product';
 
 @Injectable({
   providedIn: 'root',
@@ -13,7 +14,7 @@ export class CartService {
 
   constructor() {}
 
-  addProduct(product) {
+  addProduct(product: Product) {
     for (let existing of this.cartList) {
       if (existing.id === product.id) {
         existing.qty++;
@@ -27,7 +28,7 @@ export class CartService {
     this.cartSubject.next({ products: this.cartList });
   }
 
-  removeProduct(product) {
+  removeProduct(product: Product) {
     for (let existing of this.cartList) {
       if (existing.id === product.id) {
         existing.qty--;
@@ -39,11 +40,11 @@ export class CartService {
     }
   }
 
-  getCartState() {
+  getCartState(): Observable<any> {
     return this.$cartState;
   }
 
-  getCartTotalAmount() {
+  getCartTotalAmount(): number {
     return this.cartListQty;
   }
 }
