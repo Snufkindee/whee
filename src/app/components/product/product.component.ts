@@ -18,4 +18,8 @@ export class ProductComponent implements OnInit {
   addToCart(product): void {
     this.cartService.addProduct(product);
   }
+
+  removeProduct(product): void {
+    this.cartService.removeProduct(product);
+  }
 }

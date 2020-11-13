@@ -28,7 +28,7 @@ export class CartService {
     this.cartSubject.next({ products: this.cartList });
   }
 
-  reduceProduct(product: Product) {
+  removeProduct(product: Product) {
     for (let existing of this.cartList) {
       if (existing.id === product.id) {
         existing.qty--;
