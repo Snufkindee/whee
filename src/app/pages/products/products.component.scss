@@ -6,6 +6,11 @@
   justify-content: center;
   flex-direction: column;
   align-content: center;
+  padding-top: 170px;
+
+  @include breakpoint(tablet) {
+    padding-top: 0;
+  }
 }
 
 .product {

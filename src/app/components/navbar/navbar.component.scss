@@ -2,8 +2,8 @@
 @import "breakpoints";
 
 .container {
-  overflow: hidden;
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   background-color: $light-gray;
 }

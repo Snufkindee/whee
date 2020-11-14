@@ -15,11 +15,10 @@
 
 .close-btn {
   display: contents;
+  position: fixed;
   text-decoration: none;
   color: $black;
   cursor: pointer;
-  overflow: hidden;
-  position: sticky;
   width: 25px;
   height: 25px;
   top: 5px;
