@@ -4,6 +4,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Live demo available [here](https://snufkindee.github.io/whee/)
 
+Tested with Iphone (Chrome), Chrome and Firefox
+
 ## Install
 
 Run `npm install` to install required packages.
